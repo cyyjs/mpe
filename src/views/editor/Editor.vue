@@ -5,10 +5,10 @@
     </nav>
     <div class="editor">
       <mpe-slides v-model="slides" @select="selectSlide"></mpe-slides>
-      <editor 
-      v-model="content" 
-      height="100%" 
-      class="editor-box" 
+      <editor
+      v-model="content"
+      height="100%"
+      class="editor-box"
       :options="editorOptions"
       @change="onEditorChange"
       />
@@ -19,11 +19,11 @@
 import FileSystem from '@/lib/fileSystem'
 import Nodeppt from '@/lib/nodeppt'
 import MpeSlides from './Slides'
-import 'tui-editor/dist/tui-editor.css';
-import 'tui-editor/dist/tui-editor-contents.css';
-import 'codemirror/lib/codemirror.css';
+import 'tui-editor/dist/tui-editor.css'
+import 'tui-editor/dist/tui-editor-contents.css'
+import 'codemirror/lib/codemirror.css'
 import { Editor } from '@toast-ui/vue-editor'
-import { clearTimeout } from 'timers';
+import { clearTimeout } from 'timers'
 
 let data = FileSystem.getDefaultFileData()
 let slides = Nodeppt.getDataSlides(data)
@@ -42,10 +42,10 @@ export default {
     }
   },
   methods: {
-    selectSlide(i) {
+    selectSlide (i) {
       console.log(i)
     },
-    onEditorChange() {
+    onEditorChange () {
       clearTimeout(time)
       time = setTimeout(() => {
         this.slides = Nodeppt.getDataSlides(this.content)
