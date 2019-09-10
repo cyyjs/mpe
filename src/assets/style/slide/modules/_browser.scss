@@ -1,0 +1,35 @@
+/*=== HTML Browser (Screenshots) ================ */
+/* <figure class="browser"> img </figure> */
+
+.browser {
+  border-radius: .3em;
+  margin: 0 auto 1.2em;
+  max-width: 1024px;
+  overflow: hidden;
+
+  li & {
+    margin-bottom: 0;
+  }
+
+  h1 + &,
+  h2 + &,
+  p + & {
+    margin-top: 1.2em;
+  }
+
+  figcaption {
+    padding: 1.2em;
+  }
+
+  &:before {
+    content: '● ● ●';
+    font-size: .8em;
+    left: 0;
+    line-height: 0;
+    padding: 1.2em;
+    position: absolute;
+    text-align: left;
+    top: 0;
+    width: 100%;
+  }
+}

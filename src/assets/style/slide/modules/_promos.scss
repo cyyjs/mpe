@@ -1,0 +1,49 @@
+/*=============================================
+7. Promos/Offers (pricing, tagline, CTA...)
+=============================================== */
+
+.cta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .number,
+    .benefit {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 40%;
+        padding: .8em;
+    }
+    .number {
+        text-align: center;
+        width: 50%;
+    }
+    .benefit {
+        text-align: center;
+        border-image: linear-gradient(90deg,transparent,rgba(0,0,0,.4) 50%,transparent) 1 100%;
+        border-left-width: 2px;
+        border-style: solid;
+    }
+    .number span {
+        display: block;
+        font-size: 2em;
+        line-height: em;
+    }
+    .number span sup {
+        font-size: .5em;
+    }
+    p {
+        margin-bottom: 0;
+    }
+}
+
+
+/* --- Header CTA --- */
+
+.cta-cover {
+    display: table;
+    width: 100%;
+    h1 strong {
+        font-weight: 400;
+    }
+}

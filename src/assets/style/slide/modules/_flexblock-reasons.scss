@@ -1,0 +1,30 @@
+/*=================================================
+6.6 Reasons/Why/Numbers (counter-incement)
+<ul class="flexblock reasons">
+=================================================== */
+.flexblock.reasons {
+  li {
+    counter-increment: list;
+    text-align: left;
+    width: 100%;
+
+    &:hover {
+      transform: translateY(-.2em);
+    }
+
+    &:after {
+      bottom: -1em;
+      content: '';
+      display: block;
+      height: 2px;
+      position: relative;
+    }
+
+    &:before {
+      content: counter(list)'.';
+      font-size: 1.4em;
+      line-height: 1;
+    }
+  }
+}
+

@@ -1,0 +1,27 @@
+#slides{
+  width: 220px;
+  padding: 10px;
+  height: 100%;
+  flex-shrink: 0;
+  overflow: auto;
+  background-color: #ccc;
+  font-size: 12px;
+  box-sizing: border-box;
+  &>div{
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 10px;
+    background-color: #fff;
+    min-height: 100px;
+    overflow: hidden;
+    &:last-child{
+      margin-bottom: 0;
+    }
+    &>section{
+      height: 100px;
+      &>.wrap {
+        zoom: .5;
+      }
+    }
+  }
+}

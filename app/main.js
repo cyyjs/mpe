@@ -1,5 +1,6 @@
 // Modules to control application life and create native browser window
 const { app, BrowserWindow } = require('electron')
+require('./event')
 const Menu = require('./lib/menu')
 const path = require('path')
 const isDev = process.env.NODE_ENV === 'development'

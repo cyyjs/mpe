@@ -1,0 +1,43 @@
+/*=========================================
+13. Tables
+=========================================== */
+
+table {
+  margin-bottom: 1.2em;
+  margin-top: 1.2em;
+}
+
+td,
+th,
+thead {
+  border-spacing: 0;
+  padding: .7em 1em;
+}
+
+table.text-hight {
+  td,
+  th,
+  thead {
+    border-spacing: 0;
+    padding: 1.7em 1em;
+  }
+}
+
+thead th,
+th {
+  cursor: default;
+  font-weight: 600;
+  text-align: left;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+thead,
+td.goals {
+  font-weight: 600;
+  text-shadow: none;
+}
+
+tr>td {
+  font-weight: 400;
+}

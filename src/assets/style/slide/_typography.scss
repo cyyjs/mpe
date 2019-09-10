@@ -1,0 +1,362 @@
+/*============================
+2. TYPOGRAPHY & LISTS
+============================== */
+
+p,
+li,
+dt,
+dd,
+time,
+table,
+big,
+textarea,
+label {
+  line-height: 1.2em;
+  margin-bottom: 1.2em;
+}
+
+li,
+p:last-child {
+  margin-bottom: 0;
+}
+
+
+ul>li,
+ol>li {
+  margin-left: 1.2em;
+}
+
+li li {
+  font-size: 100%;
+}
+
+/*== List .description (Product/Specs) === */
+ul.description {
+  padding: 0;
+
+  & + p {
+    margin-top: 1.2em;
+  }
+
+  li {
+    padding-bottom: .4em;
+    padding-top: .4em;
+    position: relative;
+    transition: .3s;
+  }
+
+  li:hover {
+    padding-left: .4em;
+  }
+}
+
+ul.description li,
+.column ul li {
+  list-style: none;
+  margin-left: 0;
+}
+
+.column ol>li {
+  margin-left: 1.6em;
+}
+
+h1 svg,
+h2 svg,
+h3 svg,
+h4 svg {
+  margin-top: -.8em;
+}
+
+.text-intro svg,
+.text-quote p svg,
+.wall p svg,
+.try svg {
+  margin-top: -.4em;
+}
+
+h1 {
+  font-size: 1.5em;
+  line-height: 1.5em;
+}
+
+h1 span {
+  font-style: italic;
+}
+
+h2 {
+  font-size: 1.4em;
+  line-height: 1.4em;
+}
+
+h3 {
+  font-size: 1.3em;
+  line-height: 1.3em;
+
+}
+
+h4 {
+  font-size: 1.2em;
+  line-height: 1.2em;
+}
+
+h5 {
+  font-size: 1.1em;
+  font-weight: 600;
+  line-height: 1.1em;
+}
+
+h6 {
+  font-size: 1em;
+  font-weight: 600;
+  line-height: 1em;
+}
+
+h2.alignleft + p.alignright {
+  margin-bottom: 0;
+  margin-top: 1.2em;
+}
+
+h3.alignleft + p.alignright {
+  margin-bottom: 0;
+  margin-top: .4em;
+}
+
+@for $i from 1 through 6 {
+  @for $j from 1 through 6 {
+    h#{$i}+h#{$j} {
+      margin-top: .8em;
+    }
+  }
+}
+
+h1+img,
+h2+img,
+h3+img {
+  margin-bottom: 1.2em;
+  margin-top: 1.2em;
+}
+
+[class*='content-'] > [class*='content-'] h2,
+[class*='content-'] > [class*='content-'] h3,
+[class*='content-'] > [class*='content-'] h4 {
+  font-size: 1.4em;
+  line-height: 2em;
+}
+
+/*== 2.1. Headings with background ==*/
+@for $i from 1 through 6 {
+  h#{$i}[class*='bg-'] {
+    padding: 1.2em;
+  }
+}
+
+
+ul[class*='bg-'],
+ol[class*='bg-'],
+li[class*='bg-'],
+p[class*='bg-'] {
+  padding: 1.2em;
+}
+
+h1 [class*='bg-'],
+h2 [class*='bg-'],
+h3 [class*='bg-'] {
+  padding: .4em .8em;
+}
+
+/*== 2.2. Typography Classes = .text- == */
+.text-intro,
+[class*='content-'] p {
+  font-size: 1em;
+  line-height: 1em;
+}
+
+/* -- Serif -- */
+.text-serif,
+h1 span {
+  font-family: 'Maitree', times, serif;
+}
+
+/* -- h1,h2... Promo/Landings -- */
+.text-landing {
+  letter-spacing: .4em;
+  text-transform: uppercase;
+}
+
+/* -- Subtitle (Before h1, h2) p.subtitle + h1/h2 */
+.text-subtitle {
+  letter-spacing: .2em;
+  margin-bottom: 0;
+  text-transform: uppercase;
+
+  p#{&} {
+    font-size: 1.6em;
+
+    svg {
+      vertical-align: text-top;
+    }
+  }
+
+  + p {
+    margin-top: 1.2em;
+  }
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+/* -- Emoji (you'll love this) -- */
+.text-emoji {
+  font-size: 1.8em;
+  line-height: 1.8em;
+}
+
+/* -- Numbers (results, sales... 23,478,289 iphones) -- */
+.text-data {
+  font-size: 1.4em;
+  line-height: 2em;
+  margin-bottom: .8em;
+}
+
+.text-label {
+  display: inline-block;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.text-cols {
+  column-count: 2;
+  column-gap: 1.2em;
+  text-align: left;
+}
+.text-cols p:first-child:first-letter {
+  float: left;
+  font-size: 2em;
+  font-weight: 600;
+  line-height: 1;
+  margin: 0 .1em 0 0;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+/* -- Heading with border -- */
+.text-context {
+  position: relative;
+
+  &:before {
+    content: '';
+    display: block;
+    height: .2em;
+    margin-bottom: .6em;
+    width: 2em;
+
+    .column & {
+      width: 100%;
+    }
+  }
+
+  &.text-uppercase {
+    letter-spacing: .1em;
+  }
+}
+
+/* -- Separator/Symbols (stars ***...) -- */
+.text-symbols {
+  font-weight: 600;
+  letter-spacing: .8em;
+  text-align: center;
+}
+
+.text-separator {
+  margin-top: 1.2em;
+
+  &:before {
+    content: '';
+    height: .4em;
+    left: 0;
+    margin-top: -1.6em;
+    position: absolute;
+    width: 16%;
+  }
+}
+
+/* -- Pull Quote (Right/Left)  -- */
+[class*='text-pull'] {
+  max-width: 40%;
+  font-size: 1.4em;
+  font-weight: 400;
+  line-height: 1em;
+  margin-bottom: 1em;
+  margin-left: 1em;
+  margin-right: 1em;
+  position: relative;
+}
+
+[class*='text-pull-'] {
+  margin-top: .8em;
+  padding-top: 1em;
+}
+
+img[class*='text-pull-'],
+figure[class*='text-pull-'] {
+  margin-top: .8em;
+  padding-top: 0;
+}
+
+/* -- Interviews (Questions & Answers)  --- */
+/* -- <dl class="text-interview">
+<dt>name</dt>
+<dd><p>question or answer</p>
+</dd>
+--- */
+.text-interview dt {
+  font-weight: 600;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+/* -- Info Messages (error, warning, success... -- */
+.text-info {
+  font-size: 1.2em;
+  line-height: 1.2em;
+}
+
+/*=========================================
+2.1. San Francisco Font (Apple's new font)
+=========================================== */
+.text-apple,
+.bg-apple {
+  font-family: 'San Francisco', helvetica, arial, sans-serif;
+}
+
+/* Ultra Light */
+@font-face {
+  font-family: 'San Francisco';
+  font-weight: 100;
+  src: url('https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.woff2');
+}
+
+/* Thin */
+@font-face {
+  font-family: 'San Francisco';
+  font-weight: 200;
+  src: url('https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-thin-webfont.woff2');
+}
+
+/* Regular */
+@font-face {
+  font-family: 'San Francisco';
+  font-weight: 400;
+  src: url('https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff2');
+}
+
+/* Bold */
+@font-face {
+  font-family: 'San Francisco';
+  font-weight: bold;
+  src: url('https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff2');
+}

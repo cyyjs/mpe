@@ -1,0 +1,54 @@
+/*===========================================
+10. Cards
+============================================= */
+
+[class*='card-'] {
+  &,
+  & > a {
+    clear: both;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+  }
+
+  .fullscreen &,
+  .fullscreen & > a {
+    min-height: 100vh;
+  }
+
+  figure img,
+  figure iframe {
+    display: block;
+    margin: 0 auto;
+  }
+
+  figure figcaption {
+    bottom: 0;
+    font-size: 1.4em;
+    left: 0;
+    line-height: 1.4em;
+    padding: .8em 1.4em;
+    position: absolute;
+    z-index: 2;
+
+    svg {
+      font-size: 1em;
+    }
+  }
+}
+.flex-content,
+[class*='card'] blockquote {
+  padding: 1.4em;
+  position: relative;
+}
+
+[class*='card-'] .flex-content,
+[class*='card-'] blockquote {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.flex-content p {
+  position: relative;
+}

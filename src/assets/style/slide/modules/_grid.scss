@@ -1,0 +1,33 @@
+/*=== 1.4. Basic Grid (Flexible blocks)
+Auto-fill & Equal height === */
+
+.grid {
+  clear: both;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+
+  &:after {
+    clear: both;
+  }
+
+  &:before {
+    content: '';
+    display: table;
+  }
+
+  & > .column {
+    display: flex;
+    flex: auto;
+    flex-direction: column;
+    padding: .4em;
+    position: relative;
+    transition: .3s;
+    width: 22%;
+  }
+
+  &.vertical-align .column {
+    justify-content: center;
+  }
+}

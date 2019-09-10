@@ -1,0 +1,56 @@
+/*=========================================
+11. Quotes
+=========================================== */
+
+blockquote {
+  display: inline-block;
+  position: relative;
+  p {
+    font-size: 1.4em;
+    line-height: 1.4em;
+    &:last-child {
+      margin-bottom: 1.2em;
+    }
+  }
+}
+
+/* -- Interviews dl.text-interview -- */
+
+dd blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+cite {
+  display: block;
+  text-align: center;
+  &:before {
+    content: '\2014 \2009';
+    margin-right: 6px;
+  }
+}
+
+cite span {
+  display: block;
+}
+
+/* -- A big Blockquote -- */
+
+/* .wall will be deprecated soon. Use .text-quote ;) */
+
+.text-quote,
+.wall {
+  /* Versatility: blockquote, p, h2... */
+  position: relative;
+  &:before {
+    content: '\201C';
+    font-family: arial, sans-serif;
+    font-size: 1em;
+    height: 1.6em;
+    left: -.8em;
+    line-height: 1;
+    position: absolute;
+    text-align: center;
+    top: -2em;
+    width: 1.6em;
+  }
+}

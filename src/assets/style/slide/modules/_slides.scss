@@ -1,0 +1,86 @@
+/*============================================
+5. SLIDES (Full Screen)
+Vertically and horizontally centered
+============================================== */
+
+/* Fade transition to all slides.
+* = All HTML elements will have those styles.*/
+
+section * {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+section .background,
+section .light,
+section .dark {
+  animation-duration: 0s;
+}
+
+/*=== Section = Slide === */
+
+section,
+.slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  // height: 100%;
+  /*Fullscreen*/
+  /* Prototyping? min-height: 720px (Baseline: 8px = .8em)*/
+  padding: 1.4em;
+  /*Fixed/Visible header? padding-top: 12em; */
+  page-break-after: always;
+  position: relative;
+  word-wrap: break-word;
+}
+
+/*slide with no padding (full card, .embed youtube video...) */
+
+.fullscreen {
+  padding: 0;
+  /* Fixed/Visible header?
+  padding:8.2em 0 0 0;
+  */
+}
+
+/* slide alignment - top */
+
+.slide-top {
+  justify-content: flex-start;
+}
+
+/* slide alignment - bottom */
+
+.slide-bottom {
+  justify-content: flex-end;
+}
+
+/*== 5.1. Mini container width:50%
+Aligned items [class*="content-"]=== */
+
+[class*='content-'] {
+  position: relative;
+  text-align: left;
+}
+
+.wrap[class*='bg-'],
+.wrap.frame,
+[class*='content-'][class*='bg-'],
+[class*='content-'].frame,
+[class*='align'][class*='bg-'] {
+  padding: 1em;
+}
+
+form[class*='bg-'] {
+  padding: 1.2em;
+}
+
+[class*='content-']>[class*='content-'] p {
+  font-size: 1.6em;
+  line-height: 1.6em;
+}
+
+.content-center {
+  margin: 0 auto;
+  text-align: center;
+}
+
